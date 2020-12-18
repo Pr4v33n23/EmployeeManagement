@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EmployeeManagement.BLL.Interfaces;
+using EmployeeManagement.BOL;
 using EmployeeManagement.DAL;
+using EmployeeManagement.DAL.Interfaces;
 using EmployeeManagement.Entities;
 
 namespace EmployeeManagement.BLL
@@ -22,7 +25,7 @@ namespace EmployeeManagement.BLL
         {
             try
             {
-                return await _employeeRepo.GetAllEmployeesAsync();
+                return await _employeeRepo.ReadAllAsync();
             }
             catch (Exception ex)
             {

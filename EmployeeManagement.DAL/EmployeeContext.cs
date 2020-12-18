@@ -10,7 +10,7 @@ namespace EmployeeManagement.DAL
 {
     public class EmployeeContext: DbContext
     {
-        public EmployeeContext() : base("ConnectionString")
+        public EmployeeContext() : base("SqlConnStr")
         {
 
         }

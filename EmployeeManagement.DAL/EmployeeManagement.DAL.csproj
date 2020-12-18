@@ -53,9 +53,9 @@
   <ItemGroup>
     <Compile Include="EmployeeRepo.cs" />
     <Compile Include="EmployeeContext.cs" />
-    <Compile Include="Migrations\202012151839380_initial-migration.cs" />
-    <Compile Include="Migrations\202012151839380_initial-migration.designer.cs">
-      <DependentUpon>202012151839380_initial-migration.cs</DependentUpon>
+    <Compile Include="Migrations\202012171730533_create table.cs" />
+    <Compile Include="Migrations\202012171730533_create table.designer.cs">
+      <DependentUpon>202012171730533_create table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,18 +65,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EmployeeManagement.DAL.Interfaces\EmployeeManagement.DAL.Interfaces.csproj">
+      <Project>{494000ce-e997-4cc0-abdd-3ff76ae48690}</Project>
+      <Name>EmployeeManagement.DAL.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EmployeeManagement.Entities\EmployeeManagement.Entities.csproj">
       <Project>{f8383211-d9af-4928-a8f6-bb91c01d331c}</Project>
       <Name>EmployeeManagement.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EmployeeManagement.Interfaces\EmployeeManagement.Interfaces.csproj">
-      <Project>{635851ac-23ef-4e26-b798-8d76602becaf}</Project>
-      <Name>EmployeeManagement.Interfaces</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012151839380_initial-migration.resx">
-      <DependentUpon>202012151839380_initial-migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012171730533_create table.resx">
+      <DependentUpon>202012171730533_create table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

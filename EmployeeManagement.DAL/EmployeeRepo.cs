@@ -1,4 +1,5 @@
-﻿using EmployeeManagement.Entities;
+﻿using EmployeeManagement.DAL.Interfaces;
+using EmployeeManagement.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -10,9 +11,14 @@ namespace EmployeeManagement.DAL
 {
     public class EmployeeRepo : IEmployeeRepo
     {
-        private readonly EmployeeContext _context = new EmployeeContext();
+        private readonly EmployeeContext _context;
 
-        public async Task<IEnumerable<Employee>> GetAllEmployeesAsync()
+        public EmployeeRepo(EmployeeContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<IEnumerable<Employee>> ReadAllAsync()
         {
             try
             {

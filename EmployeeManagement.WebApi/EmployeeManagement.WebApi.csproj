@@ -68,6 +68,9 @@
     <Reference Include="Ninject.Web.Common, Version=3.3.2.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.Web.Common.3.3.2\lib\net45\Ninject.Web.Common.dll</HintPath>
     </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -155,6 +158,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
@@ -275,9 +279,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EmployeeManagement.BLL.Interfaces\EmployeeManagement.BLL.Interfaces.csproj">
+      <Project>{2affbbcd-688a-4ddf-89d8-b5fdd2124608}</Project>
+      <Name>EmployeeManagement.BLL.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EmployeeManagement.BLL\EmployeeManagement.BLL.csproj">
       <Project>{86639677-6cf4-4024-a9a5-ee0f5f1dc991}</Project>
       <Name>EmployeeManagement.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeManagement.BOL\EmployeeManagement.BOL.csproj">
+      <Project>{ad5b08fc-0742-4b15-97ec-c000b2527764}</Project>
+      <Name>EmployeeManagement.BOL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeManagement.DAL.Interfaces\EmployeeManagement.DAL.Interfaces.csproj">
+      <Project>{494000ce-e997-4cc0-abdd-3ff76ae48690}</Project>
+      <Name>EmployeeManagement.DAL.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\EmployeeManagement.DAL\EmployeeManagement.DAL.csproj">
       <Project>{3b3c03ff-6a7a-4e16-a728-b9b7a706c167}</Project>
@@ -286,10 +302,6 @@
     <ProjectReference Include="..\EmployeeManagement.Entities\EmployeeManagement.Entities.csproj">
       <Project>{f8383211-d9af-4928-a8f6-bb91c01d331c}</Project>
       <Name>EmployeeManagement.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EmployeeManagement.Interfaces\EmployeeManagement.Interfaces.csproj">
-      <Project>{635851ac-23ef-4e26-b798-8d76602becaf}</Project>
-      <Name>EmployeeManagement.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

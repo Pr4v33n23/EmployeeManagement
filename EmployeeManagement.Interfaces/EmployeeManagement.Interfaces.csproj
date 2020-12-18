@@ -46,6 +46,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EmployeeManagement.BOL\EmployeeManagement.BOL.csproj">
+      <Project>{ad5b08fc-0742-4b15-97ec-c000b2527764}</Project>
+      <Name>EmployeeManagement.BOL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EmployeeManagement.Entities\EmployeeManagement.Entities.csproj">
       <Project>{f8383211-d9af-4928-a8f6-bb91c01d331c}</Project>
       <Name>EmployeeManagement.Entities</Name>

@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeManagement.Entities
+namespace EmployeeManagement.BOL
 {
-    public class Employee
+    public class EmployeeBOL
     {
-        public int Id { get; set; }
-
         public string EmployeeId { get; set; }
 
         public string FirstName { get; set; }
@@ -19,6 +17,5 @@ namespace EmployeeManagement.Entities
         public double Salary { get; set; }
 
         public string Department { get; set; }
-
     }
 }

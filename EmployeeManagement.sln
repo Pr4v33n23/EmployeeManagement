@@ -13,7 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.DAL", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.Entities", "EmployeeManagement.Entities\EmployeeManagement.Entities.csproj", "{F8383211-D9AF-4928-A8F6-BB91C01D331C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.Interfaces", "EmployeeManagement.Interfaces\EmployeeManagement.Interfaces.csproj", "{635851AC-23EF-4E26-B798-8D76602BECAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.BOL", "EmployeeManagement.BOL\EmployeeManagement.BOL.csproj", "{AD5B08FC-0742-4B15-97EC-C000B2527764}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.BLL.Interfaces", "EmployeeManagement.BLL.Interfaces\EmployeeManagement.BLL.Interfaces.csproj", "{2AFFBBCD-688A-4DDF-89D8-B5FDD2124608}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.DAL.Interfaces", "EmployeeManagement.DAL.Interfaces\EmployeeManagement.DAL.Interfaces.csproj", "{494000CE-E997-4CC0-ABDD-3FF76AE48690}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +45,18 @@ Global
 		{F8383211-D9AF-4928-A8F6-BB91C01D331C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8383211-D9AF-4928-A8F6-BB91C01D331C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8383211-D9AF-4928-A8F6-BB91C01D331C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{635851AC-23EF-4E26-B798-8D76602BECAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{635851AC-23EF-4E26-B798-8D76602BECAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{635851AC-23EF-4E26-B798-8D76602BECAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{635851AC-23EF-4E26-B798-8D76602BECAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD5B08FC-0742-4B15-97EC-C000B2527764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5B08FC-0742-4B15-97EC-C000B2527764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5B08FC-0742-4B15-97EC-C000B2527764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5B08FC-0742-4B15-97EC-C000B2527764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AFFBBCD-688A-4DDF-89D8-B5FDD2124608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AFFBBCD-688A-4DDF-89D8-B5FDD2124608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AFFBBCD-688A-4DDF-89D8-B5FDD2124608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AFFBBCD-688A-4DDF-89D8-B5FDD2124608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{494000CE-E997-4CC0-ABDD-3FF76AE48690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{494000CE-E997-4CC0-ABDD-3FF76AE48690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{494000CE-E997-4CC0-ABDD-3FF76AE48690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{494000CE-E997-4CC0-ABDD-3FF76AE48690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
