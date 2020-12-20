@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class createtable : DbMigration
+    public partial class InitialMigration : DbMigration
     {
         public override void Up()
         {
@@ -12,11 +12,11 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        EmployeeId = c.String(),
-                        FirstName = c.String(),
-                        LastName = c.String(),
+                        EmployeeId = c.String(nullable: false),
+                        FirstName = c.String(nullable: false),
+                        LastName = c.String(nullable: false),
                         Salary = c.Double(nullable: false),
-                        Department = c.String(),
+                        Department = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             

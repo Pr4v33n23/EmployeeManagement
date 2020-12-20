@@ -1,4 +1,5 @@
 ﻿using EmployeeManagement.BOL;
+using EmployeeManagement.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,10 @@ namespace EmployeeManagement.BLL.Interfaces
 {
      public interface IEmployeeModel
     {
-        Task<IEnumerable<EmployeeBOL>> GetEmployeesAysnc();
+        IEnumerable<EmployeeBOL> GetMapEmployees(IEnumerable<Employee> employee);
+
+        EmployeeBOL GetMapEmployee(Employee employee);
+
+        Employee GetMapEmployeeBOL(EmployeeBOL employeeBOL);
     }
 }

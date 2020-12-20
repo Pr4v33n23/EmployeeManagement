@@ -13,37 +13,75 @@ namespace EmployeeManagement.BLL
 {
     public class EmployeeModel : IEmployeeModel
     {
-        private readonly IEmployeeLogic _employeeLogic;
-        private readonly EmployeeBOL _employee;
-        private IEnumerable<Employee> employees;
-        private readonly List<EmployeeBOL> employeesBOL = new List<EmployeeBOL>();
 
-        public EmployeeModel() { }
-
-        public EmployeeModel (IEmployeeLogic employeeLogic, EmployeeBOL employee)
+        public IEnumerable<EmployeeBOL> GetMapEmployees(IEnumerable<Employee> employees)
         {
-            _employeeLogic = employeeLogic;
-            _employee = employee;
-        }
-
-        public async Task<IEnumerable<EmployeeBOL>> GetEmployeesAysnc()
-        {
-            employees = await _employeeLogic.GetEmployeesAsync();
-
-            foreach(var employee in employees)
+            try
             {
-                _employee.EmployeeId = employee.EmployeeId;
-                _employee.FirstName = employee.FirstName;
-                _employee.LastName = employee.LastName;
-                _employee.Salary = employee.Salary;
-                _employee.Department = employee.Department;
+                List<EmployeeBOL> employeesBOL = new List<EmployeeBOL>();
 
-                employeesBOL.Add(_employee);
+                foreach (var employee in employees)
+                {
+                    EmployeeBOL employeeBOL = new EmployeeBOL
+                    {
+                        EmployeeId = employee.EmployeeId,
+                        FirstName = employee.FirstName,
+                        LastName = employee.LastName,
+                        Salary = employee.Salary,
+                        Department = employee.Department
+                    };
+
+                    employeesBOL.Add(employeeBOL);
+                }
+
+                return employeesBOL;
             }
+            catch (Exception ex)
+            {
 
-            return employeesBOL;
+                throw ex;
+            }
         }
 
+        public EmployeeBOL GetMapEmployee(Employee employee)
+        {
+            try
+            {
+                EmployeeBOL employeeBOL = new EmployeeBOL
+                {
+                    EmployeeId = employee.EmployeeId,
+                    FirstName = employee.FirstName,
+                    LastName = employee.LastName,
+                    Salary = employee.Salary,
+                    Department = employee.Department
+                };
+                return employeeBOL;
+            }
+            catch (Exception ex)
+            {
+                throw ex; 
+            }
+        }
 
+        public Employee GetMapEmployeeBOL(EmployeeBOL employeeBOL)
+        {
+            try
+            {
+                Employee employee = new Employee
+                {
+                    EmployeeId = employeeBOL.EmployeeId,
+                    FirstName = employeeBOL.FirstName,
+                    LastName = employeeBOL.LastName,
+                    Salary = employeeBOL.Salary,
+                    Department = employeeBOL.Department
+                };
+
+                return employee;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -10,5 +10,10 @@ namespace EmployeeManagement.DAL.Interfaces
     public interface IEmployeeRepo
     {
         Task<IEnumerable<Employee>> ReadAllAsync();
+        Task<Employee> ReadOneAsync(string employeeId);
+        Task<Employee> DeleteAsync(string employeeId);
+        Task AddAsync(Employee employee);
+        Task<Employee> UpdateAsync(string employeeId, Employee employee);
+
     }
 }

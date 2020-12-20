@@ -7,13 +7,13 @@ namespace EmployeeManagement.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class createtable : IMigrationMetadata
+    public sealed partial class InitialMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(createtable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202012171730533_create table"; }
+            get { return "202012191743256_InitialMigration"; }
         }
         
         string IMigrationMetadata.Source

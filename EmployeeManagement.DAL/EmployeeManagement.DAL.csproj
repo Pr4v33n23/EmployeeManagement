@@ -53,9 +53,9 @@
   <ItemGroup>
     <Compile Include="EmployeeRepo.cs" />
     <Compile Include="EmployeeContext.cs" />
-    <Compile Include="Migrations\202012171730533_create table.cs" />
-    <Compile Include="Migrations\202012171730533_create table.designer.cs">
-      <DependentUpon>202012171730533_create table.cs</DependentUpon>
+    <Compile Include="Migrations\202012191743256_InitialMigration.cs" />
+    <Compile Include="Migrations\202012191743256_InitialMigration.designer.cs">
+      <DependentUpon>202012191743256_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,8 +75,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012171730533_create table.resx">
-      <DependentUpon>202012171730533_create table.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012191743256_InitialMigration.resx">
+      <DependentUpon>202012191743256_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
