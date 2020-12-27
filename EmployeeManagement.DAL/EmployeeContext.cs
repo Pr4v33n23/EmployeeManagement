@@ -1,21 +1,14 @@
-﻿using EmployeeManagement.Entities;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
+using EmployeeManagement.Entities;
 
 namespace EmployeeManagement.DAL
 {
-    public class EmployeeContext: DbContext
+    public class EmployeeContext : DbContext
     {
         public EmployeeContext() : base("SqlConnStr")
         {
-
         }
 
-        public DbSet<Employee> Employees { get; set; }
-
+        public virtual DbSet<Employee> Employees { get; set; }
     }
 }

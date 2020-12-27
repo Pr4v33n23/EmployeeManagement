@@ -1,27 +1,27 @@
-﻿namespace EmployeeManagement.DAL.Migrations
+﻿using System.Data.Entity.Migrations;
+using System.Diagnostics.CodeAnalysis;
+
+namespace EmployeeManagement.DAL.Migrations
 {
-    using System;
-    using System.Data.Entity.Migrations;
-    
+    [ExcludeFromCodeCoverage]
     public partial class InitialMigration : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Employees",
-                c => new
+                    "dbo.Employees",
+                    c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
-                        EmployeeId = c.String(nullable: false),
-                        FirstName = c.String(nullable: false),
-                        LastName = c.String(nullable: false),
-                        Salary = c.Double(nullable: false),
-                        Department = c.String(nullable: false),
+                        Id = c.Int(false, true),
+                        EmployeeId = c.String(false),
+                        FirstName = c.String(false),
+                        LastName = c.String(false),
+                        Salary = c.Double(false),
+                        Department = c.String(false)
                     })
                 .PrimaryKey(t => t.Id);
-            
         }
-        
+
         public override void Down()
         {
             DropTable("dbo.Employees");

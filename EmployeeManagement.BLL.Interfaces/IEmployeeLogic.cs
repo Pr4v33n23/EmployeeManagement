@@ -1,9 +1,6 @@
-﻿using EmployeeManagement.BOL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using EmployeeManagement.BOL;
 
 namespace EmployeeManagement.BLL.Interfaces
 {
@@ -12,8 +9,7 @@ namespace EmployeeManagement.BLL.Interfaces
         Task<IEnumerable<EmployeeBOL>> GetEmployeesAsync();
         Task<EmployeeBOL> GetEmployeeByIdAsync(string employeeId);
         Task<EmployeeBOL> DeleteEmployeeByIdAsync(string employeeId);
-        Task AddEmployeeAsync(EmployeeBOL employeeBOL);
+        Task<bool> AddEmployeeAsync(EmployeeBOL employeeBOL);
         Task<EmployeeBOL> UpdateEmployeeAsync(string employeeId, EmployeeBOL employeeBOL);
-
     }
 }

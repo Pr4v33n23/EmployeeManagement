@@ -1,28 +1,23 @@
-﻿using EmployeeManagement.BLL.Interfaces;
-using EmployeeManagement.BOL;
-using EmployeeManagement.DAL;
-using EmployeeManagement.Entities;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
+using EmployeeManagement.BLL.Interfaces;
+using EmployeeManagement.BOL;
+using EmployeeManagement.Entities;
 
 namespace EmployeeManagement.BLL
 {
     public class EmployeeModel : IEmployeeModel
     {
-
         public IEnumerable<EmployeeBOL> GetMapEmployees(IEnumerable<Employee> employees)
         {
             try
             {
-                List<EmployeeBOL> employeesBOL = new List<EmployeeBOL>();
+                var employeesBOL = new List<EmployeeBOL>();
 
                 foreach (var employee in employees)
                 {
-                    EmployeeBOL employeeBOL = new EmployeeBOL
+                    var employeeBOL = new EmployeeBOL
                     {
                         EmployeeId = employee.EmployeeId,
                         FirstName = employee.FirstName,
@@ -38,7 +33,6 @@ namespace EmployeeManagement.BLL
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -47,7 +41,7 @@ namespace EmployeeManagement.BLL
         {
             try
             {
-                EmployeeBOL employeeBOL = new EmployeeBOL
+                var employeeBOL = new EmployeeBOL
                 {
                     EmployeeId = employee.EmployeeId,
                     FirstName = employee.FirstName,
@@ -59,7 +53,7 @@ namespace EmployeeManagement.BLL
             }
             catch (Exception ex)
             {
-                throw ex; 
+                throw ex;
             }
         }
 
@@ -67,7 +61,7 @@ namespace EmployeeManagement.BLL
         {
             try
             {
-                Employee employee = new Employee
+                var employee = new Employee
                 {
                     EmployeeId = employeeBOL.EmployeeId,
                     FirstName = employeeBOL.FirstName,

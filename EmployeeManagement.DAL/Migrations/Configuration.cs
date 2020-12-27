@@ -1,18 +1,17 @@
-﻿namespace EmployeeManagement.DAL.Migrations
-{
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
+﻿using System.Data.Entity.Migrations;
+using System.Diagnostics.CodeAnalysis;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<EmployeeManagement.DAL.EmployeeContext>
+namespace EmployeeManagement.DAL.Migrations
+{
+    [ExcludeFromCodeCoverage]
+    internal sealed class Configuration : DbMigrationsConfiguration<EmployeeContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(EmployeeManagement.DAL.EmployeeContext context)
+        protected override void Seed(EmployeeContext context)
         {
             //  This method will be called after migrating to the latest version.
 

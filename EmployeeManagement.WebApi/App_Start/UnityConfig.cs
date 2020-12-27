@@ -1,19 +1,21 @@
+using System.Data.Entity;
+using System.Diagnostics.CodeAnalysis;
+using System.Web.Http;
 using EmployeeManagement.BLL;
 using EmployeeManagement.BLL.Interfaces;
 using EmployeeManagement.DAL;
 using EmployeeManagement.DAL.Interfaces;
-using System.Data.Entity;
-using System.Web.Http;
 using Unity;
 using Unity.WebApi;
 
 namespace EmployeeManagement.WebApi
 {
+    [ExcludeFromCodeCoverage]
     public static class UnityConfig
     {
         public static void RegisterComponents()
         {
-			var container = new UnityContainer();
+            var container = new UnityContainer();
 
             // register all your components with the container here
             // it is NOT necessary to register your controllers
